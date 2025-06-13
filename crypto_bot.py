@@ -8,6 +8,8 @@ CHAT_ID = os.environ.get("CHAT_ID")
 
 bot = telegram.Bot(token=TOKEN)
 
+print("🚀 Shinjo Crypto Bot is now running...")  # ✅ رسالة ترحيبية في اللوق
+
 def get_price(symbol):
     url = f"https://api.coingecko.com/api/v3/simple/price?ids={symbol}&vs_currencies=usd"
     response = requests.get(url)
@@ -32,5 +34,5 @@ while True:
 
         time.sleep(60)
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"❌ Error: {e}")
         time.sleep(60)
